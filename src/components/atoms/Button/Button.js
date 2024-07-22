@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-/// TODO: Define props for OverlayMenu
-const OverlayMenu = (props) => {
+/// TODO: Define props for Button
+const Button = (props) => {
 
     return(
         <div data-testid={ props.testID }
              data-object-type={ props.type ?? ""}
-             className={ `OverlayMenu ${props.size} more utility classes` }>
+             className={ `Button ${props.size} more utility classes` }>
         </div>
     )
 
@@ -27,10 +27,10 @@ const exceptionClasses = [
     "regular"
 ]
 
-OverlayMenu.propTypes = {
+Button.propTypes = {
     testID: PropTypes.string,
     type: PropTypes.oneOf(exceptionClasses),
     size: PropTypes.oneOf(sizes),
 }
 
-export default OverlayMenu
+export default Button
